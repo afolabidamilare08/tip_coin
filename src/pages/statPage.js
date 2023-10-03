@@ -149,7 +149,7 @@ const StatsPage = () => {
             </div> */}
 
             <div style={{
-                width:"80%",
+                // width:"80%",
                 margin:"0 auto"
             }} >
 
