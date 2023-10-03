@@ -1,38 +1,598 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+:root {
+  --thinwhite: #ffffff46; 
+  --lightwhite:#ffffff86;
+  --lightbgwhite:#ffffff2b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+@media (min-width: 1500px){
+
+  body{
+      max-width: 1500px;
+      margin: 0 auto;
+      /* background-color: #181818; */
   }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.responsive_table{
+  display: none !important;
+}
+.tipCoin{
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  /* background-color: ; */
+
+}
+.tipCoin-header{
+  /* width: 100%; */
+  /* height: 11vh; */
+  border: 1px solid var(--thinwhite);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+.header-left{
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.header-leftName{
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.header-leftLinks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  font-size: .8rem;
+  padding:.3rem 1rem;
+  border-radius:20px ;
+  font-weight: 500;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.links:not(:first-child){
+  margin-left: 1rem;
+}
+
+.links:hover{
+  background-color: var(--lightbgwhite);
+  /* transform: translateY(-.2rem); */
+}
+.links:active{
+  transform: translateY(.2rem);
+}
+
+
+.link{
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  font-size: .8rem;
+  padding: 2% 0;
+  border-radius:20px ;
+  transition: .5s;
+  text-decoration: none;
+}
+.link:hover{
+  background-color: var(--lightbgwhite);
+  transform: translateY(-.2rem);
+}
+.link:active{
+  transform: translateY(.2rem);
+}
+.link:first-child{
+  border: 1px solid var(--lightwhite) ;
+}
+.log-out{
+  border-radius: 20px;
+  border: 1px solid var(--lightwhite);
+  padding: 0.3rem 1rem;
+  box-sizing: border-box;
+  transition: .3s;
+  background: none;
+}
+.log-out:hover{
+  border: 1px solid #ffffff;
+  background-color: var(--lightbgwhite);
+}
+.tipCoin-landpage{
+  padding: 2%;
+  /* height: 89vh; */
+}
+
+.tipCoin-landpageHeadText{
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+  letter-spacing: .3rem;
+}
+
+.tipCoin-table1{
+  width: 60%;
+  margin: 2rem auto;
+  /* height: 8rem; */
+  border: 1px solid var(--thinwhite);
+  border-radius: 10rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* border: 1px solid red; */
+  padding: 1rem 3rem;
+}
+
+.table1-content{
+  padding: 1rem;
+  width: 35%;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.table1-contentB{
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 1rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.table1-contentText{
+  font-size: .8rem;
+  margin-bottom: .4rem;
+}
+
+.table1-contentText2{
+  font-size: 1.2rem;
+  margin-top: .5rem;
+  font-weight: 500;
+}
+.table1-content button{
+  padding:.5rem 1rem;  
+  font-weight: 500; 
+  color: black;
+  background-color: white;
+  font-size: .7rem;
+  border: none;
+  border-radius: 20px;
+  transition: .3s;
+  margin-top: 5%;
+}
+.table1-content button:hover{
+  background-color: #ffffff90;
+}
+
+.tipCoin-table2{
+  width: 90%;
+  margin: 2rem auto;
+  /* height: 7rem; */
+  border-radius: 10px;
+  border: 1px solid var(--thinwhite);
+}
+.tipCoin-table2-top{
+  /* height: 50%; */
+  border-bottom: 1px solid var(--thinwhite);
+  display: flex;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.table2-top-content{
+  font-weight: 500;
+  font-size: .8rem;
+}
+.tipCoin-table2-bottom{
+  
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  
+}
+.tipCoin-landpagebottomText1{
+  font-size: .9rem;
+  text-align: center;
+  margin: 1.2rem auto;
+}
+.tipCoin-landpagebottomText2{
+  margin-bottom: 2rem;
+  font-size: .9rem;
+  text-align: center;
+}
+.tipCoin-statTable{
+  width: 90%;
+  height: 15rem;
+  border: 1px solid var(--thinwhite);
+  border-radius: 10px;
+}
+.tipCoin-statTable-top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20%;
+  border-bottom: 1px solid var(--thinwhite);
+}
+.tipCoin-statTable-bottom{
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 80%;
+}
+.tipCoin-statTable-bottom::-webkit-scrollbar {
+  width: 7px;
+}
+
+.tipCoin-statTable-bottom::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.tipCoin-statTable-bottom::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+.tipCoin-statTable-bottomContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20%;
+  border-bottom: 1px solid var(--thinwhite);
+}
+.tipCoin-statTable-bottomContent a{
+  color: blue;
+}
+
+
+@media ( max-width:1250px ) {
+
+  .tipCoin-table1{
+      width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media (max-width:1012px){
+
+  .tipCoin-landpageHeadText{
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      width: 80%;
+      margin: 2rem auto;
+      letter-spacing: .3rem;
+  }
+
+}
+
+@media (max-width:998px){
+
+  .content-mutiplier{
+      display: none !important;
+  }
+
+  .tipCoin-table2-bottom{
+      text-align: center;
+      font-size: .8rem;
+      padding: 1rem;
+  }
+
+}
+
+@media (max-width:795px){
+
+  .content-adjust{
+      display: none !important;
+  }
+
+}
+
+
+@media (max-width:841px){
+
+  
+.tipCoin-table1{
+  width: 100%;
+  margin: 3rem auto;
+  /* height: 8rem; */
+  border: 1px solid var(--thinwhite);
+  border-radius: 10rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.table1-content{
+  padding: 1rem;
+  width: 35%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table1-contentB{
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 1rem 2rem;
+}
+
+.table1-contentText{
+  font-size: .8rem;
+  margin-bottom: .4rem;
+}
+
+.table1-contentText2{
+  font-size: 1.2rem;
+  margin-top: .5rem;
+  font-weight: 500;
+}
+.table1-content button{
+  padding:.5rem 1rem;  
+  font-weight: 500; 
+  color: black;
+  font-size: .7rem;
+  border: none;
+  border-radius: 20px;
+  transition: .3s;
+  margin-top: 5%;
+}
+.table1-content button:hover{
+  background-color: #ffffff90;
+}
+
+}
+
+
+@media (max-width:650px){
+
+  .responsive_table{
+      display: flex !important;
+  }
+  
+  .tipCoin-table1{
+      width: 100%;
+      border: 0px solid var(--thinwhite);
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 0rem 0rem;
+      flex-wrap: wrap;
+  }
+  
+  .table1-content{
+      padding: 1rem;
+      width: 50%;
+  }
+  
+  .table1-contentB{
+      border-left: 0px solid gray;
+      border-right: 0px solid gray;
+      padding: 1rem 0rem;
+      width: 100% !important;
+      flex: 1;
+  }
+  
+  .table1-contentText{
+      font-size: .7rem;
+  }
+  
+  .table1-contentText2{
+      font-size: 1.2rem;
+  }
+  
+}
+
+
+@media (max-width: 624px){
+
+  .tipCoin-header{
+      padding: .9rem 1.2rem;
+  }
+
+  .header-leftName{
+      font-size: 1rem;
+      margin-right: 0rem;
+  }
+  
+  .header-leftLinks{
+      justify-content: space-evenly;
+      border-top: 1px solid white;
+      background-color: #333;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .links{
+      font-size: .7rem;
+      padding:1rem 1rem;
+      border-radius:0px ;
+      width: 25%;
+  }
+
+  .links:hover{
+      background-color: white;
+      color: #333;
+  }
+  .links:active{
+      background-color: white;
+      color: #333;
+  }
+
+  .links:not(:first-child){
+      margin-left: 0rem;
+  }
+
+
+  .tipCoin-landpageHeadText{
+      font-size: 1.3rem;
+      width: 90%;
+  }
+
+
+}
+
+@media (max-width:554px){
+
+  .content-points{
+      display: none !important;
+  }
+
+  .tipCoin-landpagebottomText1{
+      font-size: .7rem;
+      text-align: center;
+      margin: 1.2rem auto;
+  }
+  .tipCoin-landpagebottomText2{
+      margin-bottom: 5rem;
+      font-size: .7rem;
+      text-align: center;
+  }
+
+}
+
+
+.text-focus-in {
+-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  /* -webkit-animation-delay: .5s;
+  animation-delay: .5s; */
+        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.heartbeat-kit {
+-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+
+/* ----------------------------------------------
+* Generated by Animista on 2023-10-3 6:54:57
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+
+/**
+* ----------------------------------------
+* animation tracking-in-contract-bck-bottom
+* ----------------------------------------
+*/
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
